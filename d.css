@@ -1,0 +1,232 @@
+:root {
+  --co-a: #2b2118;
+  --co-b: #362a1d;
+  --cre: #fff6e9;
+  --cor: #e8573f;
+  --yellow: #f5c84c;
+  --tata: #eadfc8;
+}
+
+* { box-sizing: border-box;}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 30% 20%, #f8d16a 0%, #f2994a 55%, #e8783a 100%);
+  font-family: 'Poppins', sans-serif;
+  color: var(--tata);
+  overflow: hidden;
+}
+
+
+.profile-card {
+  position: relative;
+  width: 640px;                       
+  max-width: 92vw;
+  background-color: var(--co-a);     
+  border: 2px solid var(--yellow);    
+  border-radius: 28px;                
+  padding: 34px 38px 38px;            
+  margin: 20px auto;                  
+  overflow: hidden;                   
+  box-shadow:
+    0 24px 50px rgba(43, 33, 24, 0.4),
+    inset 0 1px 0 rgba(255,255,255,0.06); 
+  transition: box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  box-shadow:
+    0 30px 60px rgba(43, 33, 24, 0.5),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+.card-body {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  text-align: left;
+}
+
+@media (max-width: 640px) {
+  .card-body {
+    flex-direction: column;
+  }
+  .pic {
+    flex: none;
+    width: 70%;
+    align-self: center;
+  }
+  .paa {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-start;
+  margin-bottom: 24px;
+}
+
+.pill {
+  border: 1.5px solid rgba(234, 223, 200, 0.5);
+  color: var(--tata);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+.year-badge {
+  background: rgba(245, 200, 76, 0.12);
+  border: 1.5px solid var(--yellow);
+  color: var(--yellow);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+
+.pic {
+  flex: 0 0 210px;
+  aspect-ratio: 3 / 4;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 3px solid var(--yellow);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+}
+
+.pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.name {
+  margin: 0 0 6px;
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.15;
+  color: var(--yellow);
+  letter-spacing: 0.2px;
+}
+
+.course {
+  margin: 0 0 18px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--tata);
+  opacity: 0.8;
+}
+
+.divider {
+  width: 42px;
+  height: 4px;
+  background: var(--cor);
+  border-radius: 4px;
+  margin: 0 0 18px;
+}
+
+.bio {
+  font-size: 13.5px;
+  line-height: 1.75;
+  color: var(--tata);
+  opacity: 0.92;
+  margin: 0 0 22px;
+  max-width: 340px;
+}
+
+
+.buhay  {
+  margin-bottom: 22px;
+}
+
+.contact-pill {
+  display: inline-block;
+  background: var(--cre);
+  color: var(--co-a);
+  font-size: 12.5px;
+  font-weight: 500;
+  padding: 9px 18px;
+  border-radius: 999px;
+}
+
+.paa {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-links a {
+  color: var(--tata);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border: 1.5px solid rgba(234, 223, 200, 0.35);
+  border-radius: 999px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: var(--yellow);
+  border-color: var(--yellow);
+}
+
+
+.viewpor {
+  background-color: var(--cor);  
+  color: var(--cre);             
+  border: none;                    
+  padding: 12px 28px;              
+  border-radius: 999px;            
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 8px 18px rgba(232, 87, 63, 0.4);
+  transition: background-color 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+}
+
+.view-profile-btn:hover {
+  background-color: var(--yellow);
+  color: var(--co-a);
+  box-shadow: 0 10px 22px rgba(245, 200, 76, 0.45);
+}
